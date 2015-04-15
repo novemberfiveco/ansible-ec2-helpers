@@ -1,5 +1,11 @@
 # ansible-ec2-helpers
 
+## Installation
+
+	sudo wget https://github.com/Appstrakt/ansible-ec2-helpers/archive/develop.zip -O /tmp/ansible-ec2-helpers.zip
+	sudo unzip /tmp/ansible-ec2-helpers.zip -d /tmp
+	sudo mv /tmp/ansible-ec2-helpers-develop /etc/ansible/ec2
+
 
 ## ansible-vault KMS encryption / decryption
 
