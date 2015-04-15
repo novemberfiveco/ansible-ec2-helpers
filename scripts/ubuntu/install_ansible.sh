@@ -15,6 +15,6 @@ sudo pip install boto
 
 echo "*** Install ansible EC2 local inventory"
 sudo mkdir -p /etc/ansible
-sudo wget https://github.com/Appstrakt/ansible-ec2-helpers/archive/develop.zip -O /tmp/ansible-ec2-helpers.zip
+sudo wget https://github.com/Appstrakt/ansible-ec2-helpers/archive/master.zip -O /tmp/ansible-ec2-helpers.zip
 sudo unzip /tmp/ansible-ec2-helpers.zip -d /tmp
-sudo mv /tmp/ansible-ec2-helpers-develop /etc/ansible/ec2
+sudo mv /tmp/ansible-ec2-helpers-master /etc/ansible/ec2
