@@ -22,23 +22,16 @@ continuous deployment setups or auto-scaling groups.
 
 Create a key in AWS using the Management console at https://console.aws.amazon.com/iam/home#encryptionKeys.
 
-Create a new encrypted file using ansible-vault.
-
+Create a new encrypted file using ansible-vault. This will print the encrypted password to stderr after the file is closed.
 	
 	KMS_KEY_ID=[key arn]; KMS_EC2_REGION=[ec2 region of key]; ansible-vault create test.yml --vault-password-file=/path/to/kms_encrypt.py
 
-	
-This will print the encrypted password to stderr after the file is closed.
-
 Use the file in an ansible playbook, and run the playbook.
-
 	
 	KMS_ENCRYPTED_PASSWORD=[encrypted password]; KMS_EC2_REGION=[ec2 region of key]; ansible-playbook --vault-password-file=/path/to/kms_decrypt.py playbook.yml
 
-
 Edit the encrypted file using ansible-vault.
 	
-
 	KMS_ENCRYPTED_PASSWORD=[encrypted password]; KMS_EC2_REGION=[ec2 region of key]; ansible-vault edit test.yml --vault-password-file=/path/to/kms_decrypt.py
 
 
