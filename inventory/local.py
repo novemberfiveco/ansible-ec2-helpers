@@ -68,8 +68,7 @@ class Ec2LocalInventory:
         ''' Populate self.host_vars with properties from self.metadata and
         self.identity '''
 
-        # TODO: make configurable which property becomes the hostname
-        self.hostname = self.metadata['public-ipv4']
+        self.hostname = "localhost" #self.metadata['public-ipv4']
 
         first_network_device = self.metadata['network']['interfaces']['macs'].values()[0]
 
